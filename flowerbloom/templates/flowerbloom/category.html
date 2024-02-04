@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Various Types of Flowers - Flower Shop</title>
+
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+ <!-- jQuery -->
+ <script src="\static\flowerbloom\js\jquery-3.5.1.slim.min.js" type="text/javascript"></script>
+
+ <!-- Bootstrap -->
+ <script src="\static\flowerbloom\js\bootstrap.min.js" type="text/javascript"></script>
+ <script src="\static\flowerbloom\js\popper.min.js" type="text/javascript"></script>
+ <link href="\static\flowerbloom\css\bootstrap.min.css" type="text/css" rel="stylesheet">
+
+ <!-- FontAwesome 5 -->
+ <link href="\static\flowerbloom\fonts\fontawesome\css\all.min.css" type="text/css" rel="stylesheet">
+
+ <!-- Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,615;0,700;0,800;1,400;1,500;1,600;1,615;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+ <!-- Custom Style -->
+ <link href="\static\flowerbloom\css\style.css" type="text/css" rel="stylesheet">
+
+ <!-- Custom JavaScript -->
+ <script src="\static\flowerbloom\js\script.js" type="text/javascript"></script>
+
+ <!-- Slick Slider -->
+ <link rel="stylesheet" type="text/css" href="\static\flowerbloom\css\slick.css" />
+ <script type="text/javascript" src="\static\flowerbloom\js\slick.min.js"></script>
+</head>
+
+<body>
+
+    <header class="section__header">
+        <section class="header__main border__bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-3 col-md-12">
+                        <a href="home.html" class="brand--wrap text-decoration-none">
+                            <h1 class="logo">Flower Shop</h1>
+                        </a>
+                        <!-- brand--wrap.// -->
+                    </div>
+                    <!-- col.// -->
+                    <div class="col-xl-6 col-lg-5 col-md-6">
+                        <form action="#" class="fs__form search--header">
+                            <div class="input-group w-100">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="form-control" placeholder="Search for flower products...">
+                            </div>
+                        </form>
+                        <!-- search--wrap.// -->
+                    </div>
+                    <!-- col.// -->
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="widgets--wrap float-md-right">
+                            <div class="widget__header mr-2">
+                                <a href="profile.html" class="widget__view text-decoration-none">
+                                    <div class="icon">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <small class="text">Account</small>
+                                </a>
+                            </div>
+                            <div class="widget__header mr-2">
+                                <a href="#" class="widget__view text-decoration-none">
+                                    <div class="icon">
+                                        <i class="fa fa-bell"></i>
+                                    </div>
+                                    <small class="text">Notification</small>
+                                </a>
+                            </div>
+                            <div class="widget__header">
+                                <a href="cart.html" class="widget__view text-decoration-none">
+                                    <div class="icon">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span class="notify">3</span>
+                                    </div>
+                                    <small class="text">Shopping cart</small>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- widgets--wrap.// -->
+                    </div>
+                    <!-- col.// -->
+                </div>
+                <!-- row.// -->
+            </div>
+            <!-- container.// -->
+        </section>
+        <!-- header__main.// -->
+
+        <nav class="navbar navbar-main navbar-expand-lg border__bottom">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Themed Flowers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Various Types of Flowers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Flowers by Color</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Promotion</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- collapse.// -->
+            </div>
+            <!-- container.// -->
+        </nav>
+
+    </header>
+    <!-- section__header.// -->
+
+    <section class="section__pagetop bg">
+        <div class="container">
+            <h2 class="title-page">Various Types of Flowers</h2>
+            <nav>
+                <ol class="breadcrumb text-white">
+                    <li class="breadcrumb-item"><a href="#">Home Page</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Various Types of Flowers</li>
+                </ol>
+            </nav>
+        </div>
+        <!-- container //  -->
+    </section>
+    <!-- section__pagetop -->
+
+    <section class="section__content section__category">
+        <div class="container">
+
+            <div class="row">
+                <aside class="col-md-4 col-lg-3 fs__form2">
+
+                    <div class="card">
+                        <article class="filter-group">
+                            <header class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+                                    <i class="icon-control fa fa-chevron-down"></i>
+                                    <h6 class="title">Types of Flowers</h6>
+                                </a>
+                            </header>
+                            <div class="filter-content collapse show" id="collapse_1" style="">
+                                <div class="card-body">
+                                    <form class="pb-3">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for Flowers ...">
+                                            <div class="input-group-append">
+                                                <button class="btn fs__button" type="button"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <ul class="list-menu">
+                                        <li><a href="#">Birthday Flowers</a></li>
+                                        <li><a href="#">Congratulations Flowers</a></li>
+                                        <li><a href="#">Sympathy Flowers</a></li>
+                                        <li><a href="#">Tet Flowers</a></li>
+                                    </ul>
+
+                                </div>
+                                <!-- card-body.// -->
+                            </div>
+                        </article>
+                        <!-- filter-group  .// -->
+                        <article class="filter-group">
+                            <header class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" class="">
+                                    <i class="icon-control fa fa-chevron-down"></i>
+                                    <h6 class="title">Colors</h6>
+                                </a>
+                            </header>
+                            <div class="filter-content collapse show" id="collapse_2" style="">
+                                <div class="card-body">
+                                    <label class="custom-control custom-checkbox">
+                          <input type="checkbox" checked="" class="custom-control-input">
+                          <div class="custom-control-label">Various Colors  
+                              <b class="badge badge-pill badge-light float-right">120</b>  </div>
+                        </label>
+                                    <label class="custom-control custom-checkbox">
+                          <input type="checkbox" checked="" class="custom-control-input">
+                          <div class="custom-control-label">Red
+                              <b class="badge badge-pill badge-light float-right">85</b>  </div>
+                        </label>
+                                    <label class="custom-control custom-checkbox">
+                          <input type="checkbox" checked="" class="custom-control-input">
+                          <div class="custom-control-label">Pink 
+                              <b class="badge badge-pill badge-light float-right">35</b> </div>
+                        </label>
+                                    <label class="custom-control custom-checkbox">
+                          <input type="checkbox" checked="" class="custom-control-input">
+                          <div class="custom-control-label">Yellow
+                              <b class="badge badge-pill badge-light float-right">89</b> </div>
+                        </label>
+                                    <label class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <div class="custom-control-label">Orange 
+                              <b class="badge badge-pill badge-light float-right">30</b>  </div>
+                        </label>
+                                    <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <div class="custom-control-label">Purple 
+                                <b class="badge badge-pill badge-light float-right">10</b>  </div>
+                            </label>
+                                </div>
+                                <!-- card-body.// -->
+                            </div>
+                        </article>
+                        <!-- filter-group .// -->
+                        <article class="filter-group">
+                            <header class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
+                                    <i class="icon-control fa fa-chevron-down"></i>
+                                    <h6 class="title">Price Range</h6>
+                                </a>
+                            </header>
+                            <div class="filter-content collapse show" id="collapse_3" style="">
+                                <div class="card-body">
+                                    <input type="range" class="custom-range" min="0" max="100" name="">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Lowest Price</label>
+                                            <input class="form-control" placeholder="₹100" type="number">
+                                        </div>
+                                    </div>
+                                    <!-- form-row.// -->
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Highest Price</label>
+                                            <input class="form-control" placeholder="₹1000" type="number">
+                                        </div>
+                                    </div>
+                                    <!-- form-row.// -->
+                                    <button class="btn btn-block fs__button">Apply</button>
+                                </div>
+                                <!-- card-body.// -->
+                            </div>
+                        </article>
+                        <!-- filter-group .// -->
+                        <article class="filter-group">
+                            <header class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
+                                    <i class="icon-control fa fa-chevron-down"></i>
+                                    <h6 class="title">Size </h6>
+                                </a>
+                            </header>
+                            <div class="filter-content collapse show" id="collapse_4" style="">
+                                <div class="card-body">
+                                    <label class="checkbox-btn">
+                        <input type="checkbox">
+                        <span class="btn btn-light"> Small</span>
+                      </label>
+
+                                    <label class="checkbox-btn">
+                        <input type="checkbox">
+                        <span class="btn btn-light"> Medium</span>
+                      </label>
+
+                                    <label class="checkbox-btn">
+                        <input type="checkbox">
+                        <span class="btn btn-light"> Large</span>
+                      </label>
+                                </div>
+                                <!-- card-body.// -->
+                            </div>
+                        </article>
+                        <!-- filter-group .// -->
+                        <article class="filter-group">
+                            <header class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" class="">
+                                    <i class="icon-control fa fa-chevron-down"></i>
+                                    <h6 class="title">Other Filters</h6>
+                                </a>
+                            </header>
+                            <div class="filter-content collapse in" id="collapse_5" style="">
+                                <div class="card-body">
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="myfilter_radio" checked="" class="custom-control-input">
+                                        <div class="custom-control-label">All Conditions</div>
+                                    </label>
+                            
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="myfilter_radio" class="custom-control-input">
+                                        <div class="custom-control-label">New Arrivals</div>
+                                    </label>
+                            
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="myfilter_radio" class="custom-control-input">
+                                        <div class="custom-control-label">Promotional Flowers</div>
+                                    </label>
+                                </div>
+                                <!-- card-body.// -->
+                            </div>
+                        </article>
+                        <!-- filter-group .// -->
+                    </div>
+                    <!-- card.// -->
+
+                </aside>
+                <!-- col.// -->
+                <main class="col-md-8 col-lg-9">
+
+                    <header class="border-bottom mb-4 pb-3">
+                        <div class="form-inline">
+                            <span class="mr-auto">32 products</span>
+                                <select class="mr-2 form-control">
+                                    <option>Most Relevant</option>
+                                    <option>Newest</option>
+                                    <option>Highest Rated</option>
+                                    <option>Lowest Price</option>
+                                </select>
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="" data-original-title="List view">
+                                    <i class="fa fa-bars"></i></a>
+                                <a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip" title="" data-original-title="Grid view">
+                                    <i class="fa fa-th"></i></a>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- sect-heading -->
+
+                    <div class="section__feature row">
+                        <div class="col-6 col-lg-4">
+                            <div href="#" class="card card-product-grid">
+                                <div class="product-img">
+                                    <a href="#" class="img-wrap"> <img src="img/product-7.jpg"> </a>
+                                    <span>-10%</span>
+                                </div>
+                                <figcaption class="info-wrap text-center">
+                                    <a href="#" class="title text-decoration-none">Tulip Flower Vase Multicolor</a>
+                                    <div class="price mt-1">
+                                        <span class="color__main">₹450</span><span class="ml-2 color__gray4 text-decoration-line-through">₹500</span>
+                                    </div>
+                                    <!-- price-wrap.// -->
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- col.// -->
+
+                        <div class="col-6 col-lg-4">
+                            <div href="#" class="card card-product-grid">
+                                <div class="product-img">
+                                    <a href="#" class="img-wrap"> <img src="img/product-6.jpg"> </a>
+                                </div>
+                                <figcaption class="info-wrap text-center">
+                                    <a href="#" class="title text-decoration-none">Tulip Flower Basket Multicolor</a>
+                                    <div class="price mt-1">
+                                        <span class="color__main">₹400</span>
+                                    </div>
+                                    <!-- price-wrap.// -->
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- col.// -->
+
+                        <div class="col-6 col-lg-4">
+                            <div href="#" class="card card-product-grid">
+                                <div class="product-img">
+                                    <a href="#" class="img-wrap"> <img src="img/product-8.jpg"> </a>
+                                </div>
+                                <figcaption class="info-wrap text-center">
+                                    <a href="#" class="title text-decoration-none">Small Tulip Flower Basket Multicolor</a>
+                                    <div class="price mt-1">
+                                        <span class="color__main">₹320</span>
+                                    </div>
+                                    <!-- price-wrap.// -->
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- col.// -->
+
+                        <div class="col-6 col-lg-4">
+                            <div href="#" class="card card-product-grid">
+                                <div class="product-img">
+                                    <a href="#" class="img-wrap"> <img src="img/product-5.jpg"> </a>
+                                    <span>-50%</span>
+                                </div>
+                                <figcaption class="info-wrap text-center">
+                                    <a href="#" class="title text-decoration-none">Basket of 15 Pink Tulip Branches</a>
+                                    <div class="price mt-1">
+                                        <span class="color__main">₹300</span><span class="ml-2 color__gray4 text-decoration-line-through">₹600</span>
+                                    </div>
+                                    <!-- price-wrap.// -->
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- col.// -->
+
+                        <div class="col-6 col-lg-4">
+                            <div href="#" class="card card-product-grid">
+                                <div class="product-img">
+                                    <a href="#" class="img-wrap"> <img src="img/product-1.jpg"> </a>
+                                    <span>-20%</span>
+                                </div>
+                                <figcaption class="info-wrap text-center">
+                                    <a href="#" class="title text-decoration-none">Bouquet of Roses and Daisies</a>
+                                    <div class="price mt-1">
+                                        <span class="color__main">₹400</span><span class="ml-2 color__gray4 text-decoration-line-through">₹500</span>
+                                    </div>
+                                    <!-- price-wrap.// -->
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- col.// -->
+
+                        <div class="col-6 col-lg-4">
+                            <div href="#" class="card card-product-grid">
+                                <div class="product-img">
+                                    <a href="#" class="img-wrap"> <img src="img/product-2.jpg"> </a>
+                                </div>
+                                <figcaption class="info-wrap text-center">
+                                    <a href="#" class="title text-decoration-none">Pink Butterfly Flower Pot</a>
+                                    <div class="price mt-1">
+                                        <span class="color__main">₹200</span>
+                                    </div>
+                                    <!-- price-wrap.// -->
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- col.// -->
+
+                        <div class="col-6 col-lg-4">
+                            <div href="#" class="card card-product-grid">
+                                <div class="product-img">
+                                    <a href="#" class="img-wrap"> <img src="img/product-3.jpg"> </a>
+                                </div>
+                                <figcaption class="info-wrap text-center">
+                                    <a href="#" class="title text-decoration-none">Assorted Bouquet</a>
+                                    <div class="price mt-1">
+                                        <span class="color__main">₹550</span>
+                                    </div>
+                                    <!-- price-wrap.// -->
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- col.// -->
+
+                        <div class="col-6 col-lg-4">
+                            <div href="#" class="card card-product-grid">
+                                <div class="product-img">
+                                    <a href="#" class="img-wrap"> <img src="img/product-4.jpg"> </a>
+                                </div>
+                                <figcaption class="info-wrap text-center">
+                                    <a href="#" class="title text-decoration-none">Water Lily Vase</a>
+                                    <div class="price mt-1">
+                                        <span class="color__main">₹500</span>
+                                    </div>
+                                    <!-- price-wrap.// -->
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- col.// -->
+                    </div>
+                    <!-- row end.// -->
+
+
+                    <nav class="mt-4" aria-label="Page navigation sample">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous Page</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next Page</a></li>
+                        </ul>
+                    </nav>
+
+                </main>
+                <!-- col.// -->
+
+            </div>
+
+        </div>
+        <!-- container .//  -->
+    </section>
+    <!-- section__content.// -->
+
+    <footer class="section__footer">
+        <section class="footer__top py-5">
+            <div class="container">
+                <div class="row">
+                    <aside class="col-sm-6 col-lg-3">
+                        <h6 class="title">Introduction</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="./about.html">About the Flower Shop</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Payment Policies</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Complaint Resolution</a></li>
+                            <li><a href="#">Partnerships</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="col-sm-6 col-lg-3">
+                        <h6 class="title">Customer Support</h6>
+                        <ul class="list-unstyled">
+                            <li>Hotline: <span class="color__main">8649804068</span></li>
+                            <li><a href="#">Frequently Asked Questions</a></li>
+                            <li><a href="#">Ordering Guide</a></li>
+                            <li><a href="#">Shipping Methods</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="col-lg-6">
+                        <h6 class="title">Subscribe to Newsletter</h6>
+                        <form action="#" class="fs__form">
+                            <div class="input-group w-100">
+                                <input type="text" class="form-control" placeholder="Your Email ...">
+                                <button type="button" class="fs__button btn">Subscribe</button>
+                            </div>
+                        </form>
+                    </aside>
+                </div>
+                <!-- row.// -->
+            </div>
+            <!-- container.// -->
+        </section>
+        <!-- footer__top.// -->
+
+        <section class="footer__bottom text-center">
+            <div class="container-fluid">
+                <p class="text-muted">© 2024 — Flower Shop </p>
+            </div>
+            <!-- container-fluid.// -->
+        </section>
+        <!-- footer__bottom.// -->
+    </footer><!-- section__footer.// -->
+
+
+</body>
+
+</html>

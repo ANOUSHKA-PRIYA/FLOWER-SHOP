@@ -1,0 +1,31 @@
+
+/*flowerbloom/static/flowerbloom/css/signup.login.style.css
+{% load static %}
+.section__signup,
+.section__login {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.section__signup .card,
+.section__login .card {
+    max-width: 520px;
+    margin-top: 4rem;
+    border: 1.5px solid var(--main);
+    box-shadow: var(--shadow1);
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+
+.btn-facebook:hover,
+.btn-google:hover {
+    color: #fff;
+}
+
+.btn-google {
+    background-color: #ff7575;
+    color: #fff;
+}*/

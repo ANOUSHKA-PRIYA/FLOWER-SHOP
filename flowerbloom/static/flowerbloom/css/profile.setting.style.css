@@ -1,0 +1,127 @@
+/* Profile Page */
+
+.list-group-item {
+    border: 1px solid var(--gray5);
+}
+
+.list-group-item:hover {
+    background: var(--gray6);
+}
+
+.list-group-item.active,
+.list-group-item.active:hover {
+    background-color: var(--main);
+    border-color: var(--main);
+}
+
+.section__pro-set {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .section__pro-set main {
+        margin-top: 1rem;
+    }
+    .section__pro-set main .card-group>.card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.icontext {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.icontext .icon {
+    position: relative;
+    margin-right: 10px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+}
+
+.itemside {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+.itemside .info {
+    padding-left: 15px;
+    padding-right: 7px;
+}
+
+.itemside p {
+    margin-bottom: 0;
+}
+
+
+/* Address Page */
+
+.box {
+    padding: 18px;
+    background: #fff;
+    border: 1px solid var(--gray5);
+    border-radius: .25rem;
+}
+
+.box h6 {
+    font-weight: bold
+}
+
+.card-header,
+.card-footer {
+    background-color: var(--gray7);
+}
+
+
+/* Orders Page */
+
+.table td,
+.table th {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.price {
+    font-style: normal;
+}
+
+.section__orders figure {
+    margin-bottom: 0;
+}
+
+.section__orders .table-responsive {
+    border-top: 1px solid var(--gray5);
+}
+
+.section__pro-set .card-footer a.btn {
+    margin-right: 0.5rem;
+}
+
+
+/* Wishlist Page */
+
+.section__pro-set h6 {
+    font-weight: bold;
+}
+
+.itemside .title {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section__wishlist .card-body {
+    margin-bottom: -1.5rem;
+}
