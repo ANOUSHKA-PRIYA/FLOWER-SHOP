@@ -1,8 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 # Create your models here.
-class hello:
-    pass
+
 
 class MyUser(AbstractUser):
     mobile=models.CharField(max_length=12,verbose_name='Phone Number')
@@ -31,4 +30,11 @@ class Product(models.Model):
     def __str__(self):
         return self.name
     
-    
+    class Cart(models.Model):
+    product=models.ForeignKey(Product,on_delete=models.CASCADE)
+    quantity=models.PositiveIntegerField(default=0)
+    user=models.ForeignKey(MyUser,on_delete=models.CASCADE)
+    date_added=models.DateTimeField(auto_now_add=True)
+
+    def _str_(self):
+        return f'{self.quantity} x {self.product.name}'
