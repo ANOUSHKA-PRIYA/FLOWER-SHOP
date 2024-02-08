@@ -2,102 +2,67 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="{% static 'flowerbloom/css/bootstrap.min.css' %}" type="text/css">
-<link rel="stylesheet" href="{% static 'flowerbloom/fonts/fontawesome/css/all.min.css' %}" type="text/css">
-<link rel="stylesheet" href="{% static 'flowerbloom/css/signup.login.style.css' %}" type="text/css">
-<style>
-    body {
-        background-image: url('https://img.freepik.com/premium-photo/field-sunset-fog-blossoming-burdock-bush-natural-background-copy-space_161307-2048.jpg');
-        background-size: cover;
-        background-position: center;
-        font-family: Arial, sans-serif;
-    }
-    .navbar {
-        background-color: #343a40;
-    }
-    .navbar-brand {
-        font-family: 'YourCustomFont', cursive;
-    }
-    .regContent {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        margin-top: 50px;
-    }
-    .regContent form table {
-        width: 100%;
-    }
-    .regContent form td {
-        padding: 10px;
-    }
-    .regContent form input[type="text"],
-    .regContent form input[type="email"],
-    .regContent form input[type="password"] {
-        width: calc(100% - 20px);
-        padding: 8px;
-        margin: 5px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    .regContent form input[type="submit"] {
-        background-color: #343a40;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
-    .regContent form input[type="submit"]:hover {
-        background-color: #555;
-    }
-    .page-footer {
-        text-align: center;
-        color: #777;
-        margin-top: 20px;
-    }
-</style>
-<title>SIGNUP</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <title>Flower Shop</title>
+    
+        <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+    
+        <!-- jQuery -->
+        <script src="{% static 'flowerbloom/js/jquery-3.5.1.slim.min.js' %}" type="text/javascript"></script>
+    
+        <!-- Bootstrap -->
+        <script src="{% static 'flowerbloom/js/bootstrap.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'flowerbloom/js/popper.min.js' %}" type="text/javascript"></script>
+        <link href="{% static 'flowerbloom/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+    
+        <!-- FontAwesome 5 -->
+        <link href="{% static 'flowerbloom/fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
+    
+        <!-- Google Fonts -->
+        <link href="//fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,615;0,700;0,800;1,400;1,500;1,600;1,615;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Custom Style -->
+        <link href="{% static 'flowerbloom/css/style.css' %}" type="text/css" rel="stylesheet">
+    
+        <!-- Custom JavaScript -->
+        <script src="{% static 'flowerbloom/js/script.js' %}" type="text/javascript"></script>
+    
+        <!-- Slick Slider -->
+        <link rel="stylesheet" type="text/css" href="{% static 'flowerbloom/css/slick.css' %}" />
+        <script type="text/javascript" src="{% static 'flowerbloom/js/slick.min.js' %}"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <style>
+        .custom-border {
+              border: 2px solid #dd3577 !important;
+              box-sizing: border-box;
+            }
+        .custom-btn {
+                background-color: #dd3577; 
+                color: white; 
+                border: none;
+                padding: 10px 20px; 
+                text-align: center;
+                text-decoration: none; 
+                display: inline-block; 
+                font-size: 16px; 
+                cursor: pointer; 
+                border-radius: 5px; 
+            }
+        .custom-btn:hover {
+                background-color: #ff66a3; 
+            }
+      </style>
+    </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <a class="navbar-brand" href="#">Spring Bloom</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="main_nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="{% url 'home-page' %}" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Themed Flowers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Various Types of Flowers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Flowers by Color</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Promotions</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    {% include './header.html' %}
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="regContent">
+            <div class="col-md-4 ">
+                <div class="regContent border custom-border">
                     <h2 class="text-center mb-4">Sign Up</h2>
                     <form name="frm" method="post" novalidate>
                         {% csrf_token %}
@@ -110,24 +75,29 @@
                             </tr>
                             {% endfor %}
                             <tr>
-                                <td colspan="2" text-align="center"><input type="submit" value="Register" class="btn btn-primary"></td>
+                                <td colspan="2" text-align="center"><input type="submit" value="Register" class="btn  btn-block custom-btn my-3 mx-3"></td>
                             </tr>
+                            
                         </table>
                     </form>
-                    <p>Already have an account?</p><a href="{% url 'login-page' %}">Login</a>
+                </div>
+                <div class="col text-center">
+                    <p>Already have an account?  <a href="{% url 'login-page' %}">Login</a></p>
                     {% if messages %}
                         {% for msg in messages %}
                             <div class="alert alert-info">{{ msg }}</div>
                         {% endfor %}
                     {% endif %}
                 </div>
+                    
+                
             </div>
         </div>
     </div>
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
         &copy; 2024 Spring Bloom. All rights reserved.
-    </footer>
-
+    </footer> -->
+    {% include './footer.html' %}
     <script src="{% static 'flowerbloom/js/script.js' %}" type="text/javascript"></script>
     <script src="{% static 'flowerbloom/js/popper.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'flowerbloom/js/bootstrap.min.js' %}" type="text/javascript"></script>

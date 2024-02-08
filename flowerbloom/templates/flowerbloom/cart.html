@@ -103,6 +103,8 @@
                         <tr>
                             <th>Product Name</th>
                             <th>Quantity</th>
+                            <th>Item Price</th>
+                            <th>Delivery Charge</th>
                             <th>Price</th>
                             <th>Total</th>
                         </tr>
@@ -117,6 +119,8 @@
                             </td>
                             <td>{{ item.quantity }}</td>
                             <td>&#8377;{{ item.product.price }}</td>
+                            <td>&#8377;{{ item.product.delivery_charge }}</td>
+                            <td>&#8377;{{ iprice }}</td>
                             
                         </tr>
                         {% endfor %}
@@ -129,7 +133,7 @@
                 </table>
             </div>
         <!-- container .//  -->
-    </section>
+        </nav>
     <!-- section__content.// -->
 
     <footer class="section__footer">

@@ -11,10 +11,10 @@ def home(request):
 
 # flowerbloom/views.py
 # flowerbloom/views.py
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect , get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import MyRegFrm,LoginFrm
@@ -45,7 +45,6 @@ def login_view(request):
             user = authenticate( username=uemail, password=upass)
             if user is not None:
                 login(request, user)
-                print("inside if")
                 return redirect('category-page')
             else:
                 messages.error(request, 'Invalid email or password')
@@ -70,8 +69,9 @@ def add_to_cart(request, p_id):
 def view_cart(request):
     if request.user.is_authenticated:
         cart_items = Cart.objects.filter(user=request.user)
-        total_price = sum(item.product.price * item.quantity for item in cart_items)  # Calculate total price
-        return render(request, 'flowerbloom/cart.html', {'cart_items': cart_items, 'total_price': total_price})
+        iprice = sum(item.product.price + item.product.delivery_charge for item in cart_items)
+        total_price = sum((item.product.price + item.product.delivery_charge) * item.quantity for item in cart_items)
+        return render(request, 'flowerbloom/cart.html', {'cart_items': cart_items, 'total_price': total_price,'iprice':iprice })
     else:
         return redirect('/login/') 
 
@@ -106,3 +106,15 @@ def orders(request):
 
 def address(request):
     return render(request, 'flowerbloom/address.html')
+
+
+'''def product(request, p_id):
+    # Retrieve the product from the database based on the product ID
+    product = get_object_or_404(Product, p_id=p_id)
+    description= product.description.split('\n')
+    return render(request, 'flowerbloom/product.html', {'product': product , 'description':description})'''
+
+def product(request, p_id):
+    # Retrieve the product from the database based on the product ID
+    product = get_object_or_404(Product, p_id=p_id)
+    return render(request, 'flowerbloom/product.html', {'product': product})
