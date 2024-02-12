@@ -37,96 +37,7 @@
 
 <body>
 
-    <header class="section__header">
-        <section class="header__main border__bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-2 col-lg-3 col-md-12">
-                        <a href="{% url 'home-page' %}" class="brand--wrap text-decoration-none">
-                            <h1 class="logo">Flower Shop</h1>
-                        </a>
-                        <!-- brand--wrap.// -->
-                    </div>
-                    <!-- col.// -->
-                    <div class="col-xl-6 col-lg-5 col-md-6">
-                        <form action="#" class="fs__form search--header">
-                            <div class="input-group w-100">
-                                <i class="fa fa-search"></i>
-                                <input type="text" class="form-control" placeholder="Search for flower products...">
-                            </div>
-                        </form>
-                        <!-- search--wrap.// -->
-                    </div>
-                    <!-- col.// -->
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="widgets--wrap float-md-right">
-                            <div class="widget__header mr-2">
-                                <a href="{% url 'profile-page' %}" class="widget__view text-decoration-none">
-                                    <div class="icon">
-                                        <i class="fas fa-user-circle"></i>
-                                    </div>
-                                    <small class="text">Account</small>
-                                </a>
-                            </div>
-                            <div class="widget__header mr-2">
-                                <a href="#" class="widget__view text-decoration-none">
-                                    <div class="icon">
-                                        <i class="fa fa-bell"></i>
-                                    </div>
-                                    <small class="text">Notification</small>
-                                </a>
-                            </div>
-                            <div class="widget__header">
-                                <a href="{% url 'cart-page' %}" class="widget__view text-decoration-none">
-                                    <div class="icon">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span class="notify">3</span>
-                                    </div>
-                                    <small class="text">Shopping cart</small>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- widgets--wrap.// -->
-                    </div>
-                    <!-- col.// -->
-                </div>
-                <!-- row.// -->
-            </div>
-            <!-- container.// -->
-        </section>
-        <!-- header__main.// -->
-    
-        <nav class="navbar navbar-main navbar-expand-lg border__bottom">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="main_nav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home-page' %}">Homepage</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Themed Flowers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'category-page' %}">Various Types of Flowers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Flowers by Color</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Promotion</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- collapse.// -->
-            </div>
-            <!-- container.// -->
-        </nav>
-    
-    </header>
+    {% include './header.html' %}
     <!-- section__header.// -->
 
     <section class="section__pagetop bg">
@@ -144,30 +55,36 @@
         <section class="section__content section__category">
             <div class="container">
                 <div class="row">
-                    {% if allprod %}
-                        {% for item in allprod %}
-                        <a href="{% url 'product' item.p_id %}">
-                            <div class="card col-4">
-                                <img src="{{ item.image.url }}" class="card-img-top">
-                                <div class="card-header">
-                                    <h4 class="card-title">{{ item.name }}</h4>
+                    {% if birthday_products %}
+                        {% for item in birthday_products %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <a href="{% url 'product' item.p_id %}" class="text-decoration-none">
+                                <div class="card h-100">
+                                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ item.name }}</h5>
+                                        <p class="card-text text-justify">{{ item.description }}</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="text-muted">Price &#8377;{{ item.price }}</p>
+                                        <a href="{% url 'add_to_cart' item.p_id %}"><button class="fs__button custom-btn btn w-max mt-2" type="button">Add to Cart</button></a>
+                                    <a href="{% url 'add_to_wishlist' item.p_id %}"><button class="fs__button custom-btn btn w-max mt-2" type="button">Wishlist
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                                        </svg>
+                                    </button></a>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text text-justify">{{ item.description }}</p>
-                                </div>
-                                <div class="card-footer">
-                                    Price &#8377;{{ item.price }}
-                                    <a href="{% url 'add_to_cart' item.p_id %}"><button type="button">Add to Cart</button></a>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         {% endfor %}
                     {% else %}
-                        <h3 class="text-center text-danger">Sorry No products found</h3>
+                        <div class="col">
+                            <h3 class="text-center text-danger">Sorry, no products found</h3>
+                        </div>
                     {% endif %}
                 </div>
             </div>
-            <!-- container .//  -->
         </section>
         <!-- section__content.// -->
         
@@ -194,61 +111,7 @@
         <!-- container .//  -->
     </section>
     <!-- section__content.// -->
-    <footer class="section__footer">
-        <section class="footer__top py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Introduction Section -->
-                    <aside class="col-sm-6 col-lg-3">
-                        <h6 class="title">Introduction</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="{% url 'about-page' %}">About Flower Shop</a></li>
-                            <li> <a href="#">Careers</a></li>
-                            <li> <a href="#">Payment Policies</a></li>
-                            <li> <a href="#">Privacy Policy</a></li>
-                            <li> <a href="#">Complaint Resolution</a></li>
-                            <li> <a href="#">Partnerships</a></li>
-                        </ul>
-                    </aside>
-    
-                    <!-- Customer Support Section -->
-                    <aside class="col-sm-6 col-lg-3">
-                        <h6 class="title">Customer Support</h6>
-                        <ul class="list-unstyled">
-                            <li>Hotline: <span class="color__main">1900-80xx</span></li>
-                            <li> <a href="#">Frequently Asked Questions</a></li>
-                            <li> <a href="#">Ordering Guide</a></li>
-                            <li> <a href="#">Shipping Methods</a></li>
-                            <li> <a href="#">Return Policy</a></li>
-                        </ul>
-                    </aside>
-    
-                    <!-- Newsletter Subscription Section -->
-                    <aside class="col-lg-6">
-                        <h6 class="title">Subscribe to Newsletter</h6>
-                        <form action="#" class="fs__form">
-                            <div class="input-group w-100">
-                                <input type="text" class="form-control" placeholder="Your Email ...">
-                                <button type="button" class="fs__button btn">Subscribe</button>
-                            </div>
-                        </form>
-                    </aside>
-                </div>
-                <!-- row.// -->
-            </div>
-            <!-- container.// -->
-        </section>
-        <!-- footer__top.// -->
-    
-        <!-- Bottom Footer Section -->
-        <section class="footer__bottom text-center">
-            <div class="container-fluid">
-                <p class="text-muted">© 2024 — Flower Shop</p>
-            </div>
-            <!-- container-fluid.// -->
-        </section>
-        <!-- footer__bottom.// -->
-    </footer>
+    {% include './footer.html' %}
 
 </body>
 

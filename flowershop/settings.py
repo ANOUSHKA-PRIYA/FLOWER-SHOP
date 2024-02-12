@@ -133,3 +133,6 @@ MEDIA_ROOT=BASE_DIR/"media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'flowerbloom.MyUser'
+RAZORPAY_API_KEY = 'rzp_test_LOQW4a93WLPyup'
+RAZORPAY_API_SECRET = 'Wwj7V3dYnj7TKTrACR0Bx4zf'
+SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin-allow-popups"

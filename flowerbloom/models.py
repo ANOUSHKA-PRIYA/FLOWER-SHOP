@@ -39,4 +39,21 @@ class Cart(models.Model):
     def _str_(self):
         return f'{self.quantity} x {self.product.name}'
     
+class WishlistItem(models.Model):
+    user = models.ForeignKey(MyUser, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE) 
+    added_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'product')
+
+class Order(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=0)
+    user = models.ForeignKey(MyUser, on_delete=models.CASCADE)
+    date_ordered = models.DateTimeField(auto_now_add=True)
+    payment_status=models.CharField(max_length=255)
+    payment_id=models.CharField(max_length=255)
+    address=models.TextField()
+    
     

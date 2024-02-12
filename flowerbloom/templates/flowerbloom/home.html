@@ -1,135 +1,64 @@
-{% load static %}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Flower Shop</title>
-
-    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
-
-    <!-- jQuery -->
-    <script src="{% static 'flowerbloom/js/jquery-3.5.1.slim.min.js' %}" type="text/javascript"></script>
-
-    <!-- Bootstrap -->
-    <script src="{% static 'flowerbloom/js/bootstrap.min.js' %}" type="text/javascript" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></script>></script>
-    <script src="{% static 'flowerbloom/js/popper.min.js' %}" type="text/javascript"></script>
-    <link href="{% static 'flowerbloom/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- FontAwesome 5 -->
-    <link href="{% static 'flowerbloom/fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="//fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,615;0,700;0,800;1,400;1,500;1,600;1,615;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Custom Style -->
-    <link href="{% static 'flowerbloom/css/style.css' %}" type="text/css" rel="stylesheet">
-
-    <!-- Custom JavaScript -->
-    <script src="{% static 'flowerbloom/js/script.js' %}" type="text/javascript"></script>
-
-    <!-- Slick Slider -->
-    <link rel="stylesheet" type="text/css" href="{% static 'flowerbloom/css/slick.css' %}" />
-    <script type="text/javascript" src="{% static 'flowerbloom/js/slick.min.js' %}"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <title>Flower Shop</title>
+    
+        <link href="{% static 'images/favicon.ico ' %}" rel="shortcut icon" type="image/x-icon">
+    
+        <!-- jQuery -->
+        <script src="{% static 'flowerbloom/js/jquery-3.5.1.slim.min.js' %}" type="text/javascript"></script>
+    
+        <!-- Bootstrap -->
+        <script src="{% static 'flowerbloom/js/bootstrap.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'flowerbloom/js/popper.min.js' %}" type="text/javascript"></script>
+        <link href="{% static 'flowerbloom/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+    
+        <!-- FontAwesome 5 -->
+        <link href="{% static 'flowerbloom/fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
+    
+        <!-- Google Fonts -->
+        <link href="//fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,615;0,700;0,800;1,400;1,500;1,600;1,615;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Custom Style -->
+        <link href="{% static 'flowerbloom/css/style.css' %}" type="text/css" rel="stylesheet">
+    
+        <!-- Custom JavaScript -->
+        <script src="{% static 'flowerbloom/js/script.js' %}" type="text/javascript"></script>
+    
+        <!-- Slick Slider -->
+        <link rel="stylesheet" type="text/css" href="{% static 'flowerbloom/css/slick.css' %}" />
+        <script type="text/javascript" src="{% static 'flowerbloom/js/slick.min.js' %}"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <style>
+            .custom-border {
+                  border: 2px solid #dd3577 !important;
+                  box-sizing: border-box;
+                }
+            .custom-btn {
+                    background-color: #dd3577 !important; 
+                    color: white; 
+                    border: none;
+                    padding: 10px 20px; 
+                    text-align: center;
+                    text-decoration: none; 
+                    display: inline-block; 
+                    font-size: 16px; 
+                    cursor: pointer; 
+                    border-radius: 5px; 
+                }
+            .custom-btn:hover {
+                    background-color: #ff66a3; 
+                }
+          </style>
+    </head>
 <body>
 
-    <header class="section__header">
-        <section class="header__main border__bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-2 col-lg-3 col-md-12">
-                        <a href="{% url 'home-page' %}" class="brand--wrap text-decoration-none">
-                            <h1 class="logo">Flower Shop</h1>
-                        </a>
-                        <!-- brand--wrap.// -->
-                    </div>
-                    <!-- col.// -->
-                    <div class="col-xl-6 col-lg-5 col-md-6">
-                        <form action="#" class="fs__form search--header">
-                            <div class="input-group w-100">
-                                <i class="fa fa-search"></i>
-                                <input type="text" class="form-control" placeholder="Search for flower products...">
-                            </div>
-                        </form>
-                        <!-- search--wrap.// -->
-                    </div>
-                    <!-- col.// -->
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="widgets--wrap float-md-right">
-                            <div class="widget__header mr-2 ">
-                                <a class="nav-link widget__view text-decoration-none" href="{% url 'login-page' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <div class="'icon">
-                                      <i class="fas fa-user-circle"></i>
-                                    </div>
-                                    <small class="text">Account</small>
-                                  </a>
-                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{% url 'login-page' %}">Login </a></li>
-                                    <li><a class="dropdown-item" href="{% url 'signup-page' %}">Sign Up</a></li>
-                                  </ul>
-                            </div>
-                            <div class="widget__header mr-2">
-                                <a href="#" class="widget__view text-decoration-none">
-                                    <div class="icon">
-                                        <i class="fa fa-bell"></i>
-                                    </div>
-                                    <small class="text">Notification</small>
-                                </a>
-                            </div>
-                            <div class="widget__header">
-                                <a href="{% url 'cart-page' %}" class="widget__view text-decoration-none">
-                                    <div class="icon">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span class="notify">3</span>
-                                    </div>
-                                    <small class="text">Shopping cart</small>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- widgets--wrap.// -->
-                    </div>
-                    <!-- col.// -->
-                </div>
-                <!-- row.// -->
-            </div>
-            <!-- container.// -->
-        </section>
-        <!-- header__main.// -->
-    
-        <nav class="navbar navbar-main navbar-expand-lg border__bottom">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="main_nav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home-page' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Themed Flowers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'category-page' %}">Various Types of Flowers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Flowers by Color</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Promotion</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- collapse.// -->
-            </div>
-            <!-- container.// -->
-        </nav>
-    
-    </header>
+    {% include './header.html' %}
     <!-- section__header.// -->
 
     <section class="section__slider">
@@ -141,7 +70,7 @@
                         <div class="header-content slide-content col-lg-4">
                             <h1 class="mb-3">Send a bouquet of flowers to express a thousand <span class="color__main">love</span></h1>
                             <p>Tulips symbolize love and romance. This type of flower always carries passion and allure in its beauty and simplicity.</p>
-                            <button type="button" class="fs__button btn w-max mt-2">Order Now</button>
+                            <button type="button" class="fs__button custom-btn w-max mt-2">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -153,7 +82,7 @@
                         <div class="header-content slide-content col-lg-4">
                             <h1 class="mb-3">Flowers and Ornamental Plants for Space Decoration</h1>
                             <p>Cacti symbolize strong will, resilience in overcoming challenges, refusal to be subdued, and adaptability for survival.</p>
-                            <button type="button" class="fs__button btn w-max mt-2">Order Now</button>
+                            <button type="button" class="fs__button custom-btn w-max mt-2">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -165,7 +94,7 @@
                         <div class="header-content slide-content col-lg-4">
                             <h1 class="mb-3">Diverse Types of Flowers and Decorative Plants</h1>
                             <p>Decorating homes with plants and flowers makes people feel close to nature, enhancing the beauty and freshness of the room.</p>
-                            <button type="button" class="fs__button btn w-max mt-2">See More</button>
+                            <button type="button" class="fs__button custom-btn w-max mt-2">See More</button>
                         </div>
                     </div>
                 </div>
@@ -180,38 +109,34 @@
         <div class="container">
             <div class="product-top-bar section-border mb-5">
                 <div class="section-title-wrap">
-                    <h3 class="section-title section-bg-gray">On Sale</h3>
+                    <h3 class="section-title section-bg-gray">Our main products</h3>
                 </div>
             </div>
             <div class="single-best-selling">
-                {% if allprod %}
-                    <div class="row">
-                        {% for item in allprod %}
-                            <div class="card col-4">
-                                <img src="../../media/{{ item.image }}" class="card-img-top">
-                                <div class="card-header">
-                                    <h4 class="card-title">{{ item.name }}</h4>
-                                </div>
+            
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-md-4">
+                            <div class="card product-card">
+                                <img src="{{ product.image.url }}" class="card-img-top product-image" alt="{{ product.name }}">
                                 <div class="card-body">
-                                    <p class="card-text text-justify">{{ item.description }}</p>
-                                </div>
-                                <div class="card-footer">
-                                    <p>Category: {{ item.category.cat_name }}</p>
-                                    <p>Price: &#8377;{{ item.price }}</p>
-                                    <a href="/add_to_cart/{{ item.p_id }}"><button type="button">Add to Cart</button></a>
+                                    <h5 class="card-title">{{ product.name }}</h5>
+                                    <a href="{% url 'add_to_cart' product.p_id %}"><button class="fs__button custom-btn btn w-max mt-2" type="button" style="width: 140px; height: 40px;">Add to Cart</button></a>
+                                    <a href="{% url 'add_to_wishlist' product.p_id %}"><button class="fs__button custom-btn btn w-max mt-2" type="button">Wishlist
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                                        </svg>
+                                    </button></a>
                                 </div>
                             </div>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    <div class="text-center text-danger">
-                        <h3>Sorry, no products found</h3>
-                    </div>
-                {% endif %}
-
+                        </div>
+                    {% endfor %}
                 </div>
+                
+            </div>
         </div>
     </section>
+    
     <!-- section__new.// -->
 
     <section class="section__quote my-5 p-5">
@@ -252,18 +177,16 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <p><span class="color__main">Flower Shop</span> is the leading flower store in Saigon. The shop specializes in providing various types of fresh flowers, diverse cut flowers, with many colors, sourced from famous gardens
+                    <p><span class="color__main">Flower Shop</span> is the leading flower store in India. The shop specializes in providing various types of fresh flowers, diverse cut flowers, with many colors, sourced from famous gardens
                         both locally and internationally. The flowers are arranged in various aesthetically pleasing forms, catering to the diverse needs of customers.</p>
-                    <button type="button" class="fs__button btn">Learn More</button>
+                    <button type="button" class="fs__button custom-btn btn">Learn More</button>
                 </div>
                 <div class="col-md-6">
                     <div class="about__video">
-                        <div class="about__video--image">
-                            <img src="{% static 'flowerbloom/images/video.png' %}" class="img-fluid" alt="Video">
-                        </div>
-                        <a class="text-decoration-none" href="#">
-                            <span class="about__video--text"><span>Video</span></span>
-                        </a>
+                            <video width="640" height="360" controls>
+                            <source src="{% static 'flowerbloom/images/lotus_dancing_in_the_wind (1080p).mp4' %}" alt="Video" type="video/mp4">
+                            </video>
+                        
                     </div>
                 </div>
             </div>
@@ -271,56 +194,7 @@
     </section>
     <!-- section__about.// -->
 
-    <footer class="section__footer">
-        <section class="footer__top py-5">
-            <div class="container">
-                <div class="row">
-                    <aside class="col-sm-6 col-lg-3">
-                        <h6 class="title">Introduction</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="{% url 'about-page' %}">About the Flower Shop</a></li>
-
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Payment Policies</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Complaint Resolution</a></li>
-                            <li><a href="#">Partnerships</a></li>
-                        </ul>
-                    </aside>
-                    <aside class="col-sm-6 col-lg-3">
-                        <h6 class="title">Customer Support</h6>
-                        <ul class="list-unstyled">
-                            <li>Hotline: <span class="color__main">8649804068</span></li>
-                            <li><a href="#">Frequently Asked Questions</a></li>
-                            <li><a href="#">Ordering Guide</a></li>
-                            <li><a href="#">Shipping Methods</a></li>
-                            <li><a href="#">Return Policy</a></li>
-                        </ul>
-                    </aside>
-                    <aside class="col-lg-6">
-                        <h6 class="title">Subscribe to Newsletter</h6>
-                        <form action="#" class="fs__form">
-                            <div class="input-group w-100">
-                                <input type="text" class="form-control" placeholder="Your Email ...">
-                                <button type="button" class="fs__button btn">Subscribe</button>
-                            </div>
-                        </form>
-                    </aside>
-                </div>
-                <!-- row.// -->
-            </div>
-            <!-- container.// -->
-        </section>
-        <!-- footer__top.// -->
-
-        <section class="footer__bottom text-center">
-            <div class="container-fluid">
-                <p class="text-muted">© 2024 — Flower Shop </p>
-            </div>
-            <!-- container-fluid.// -->
-        </section>
-        <!-- footer__bottom.// -->
-    </footer><!-- section__footer.// -->
+    {% include './footer.html' %}
 </body>
 
 </html>
