@@ -122,7 +122,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ product.name }}</h5>
                                     <a href="{% url 'add_to_cart' product.p_id %}"><button class="fs__button custom-btn btn w-max mt-2" type="button" style="width: 140px; height: 40px;">Add to Cart</button></a>
-                                    <a href="{% url 'add_to_wishlist' product.p_id %}"><button class="fs__button custom-btn btn w-max mt-2" type="button">Wishlist
+                                    <a href="{% url 'add_to_wishlist' product.p_id %}"><button class="fs__button custom-btn btn w-max mt-2" type="button" style="width: 140px; height: 40px;">Wishlist
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-heart-fill" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
                                         </svg>
@@ -177,17 +177,15 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <p><span class="color__main">Flower Shop</span> is the leading flower store in India. The shop specializes in providing various types of fresh flowers, diverse cut flowers, with many colors, sourced from famous gardens
+                    <p><span class="color__main">Spring Bloom</span> is the leading flower store in India. The shop specializes in providing various types of fresh flowers, diverse cut flowers, with many colors, sourced from famous gardens
                         both locally and internationally. The flowers are arranged in various aesthetically pleasing forms, catering to the diverse needs of customers.</p>
                     <button type="button" class="fs__button custom-btn btn">Learn More</button>
                 </div>
                 <div class="col-md-6">
                     <div class="about__video">
-                            <video width="640" height="360" controls>
-                            <source src="{% static 'flowerbloom/images/lotus_dancing_in_the_wind (1080p).mp4' %}" alt="Video" type="video/mp4">
-                            </video>
-                        
+                        <img src="{% static 'flowerbloom/images/vv.gif' %}" alt="Video" width="600" height="340">
                     </div>
+                    
                 </div>
             </div>
         </div>
