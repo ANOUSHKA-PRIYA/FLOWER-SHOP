@@ -37,9 +37,9 @@
 
 <body>
 
-    {% include './header.html' %}
+    
     <!-- section__header.// -->
-
+    {% include './header.html' %}
     <section class="section__pagetop bg">
         <div class="container">
             <h2 class="title-page">{{ category.cat_name }}</h2>
@@ -53,8 +53,8 @@
         <!-- container //  -->
         
         <section class="section__content section__category">
+            
             <div class="container">
-                {% include './header.html' %}
                 <div class="row">
                     {% if gift %}
                         {% for item in gift %}

@@ -269,3 +269,4 @@ def payment_failed(request):
 
 def payment_policies(request):
     return render(request, 'flowerbloom/payment_policies.html')
+
