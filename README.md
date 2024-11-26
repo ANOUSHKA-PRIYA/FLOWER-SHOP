@@ -1,9 +1,9 @@
 # Spring-Bloom
 # Ecommerce Website (Flower Shop) 
-# •	Frontend: Created a responsive UI with HTML, CSS, Bootstrap.   
-# •	Backend: Developed in Python, Django for Authentication, Product Management, and Orders.   
-# •	Database: MySQL for secure data and order history management.   
-# •	Payments: Integrated secure payment gateways for seamless transactions. 
+•	Frontend: Created a responsive UI with HTML, CSS, Bootstrap.   
+•	Backend: Developed in Python, Django for Authentication, Product Management, and Orders.   
+•	Database: MySQL for secure data and order history management.   
+•	Payments: Integrated secure payment gateways for seamless transactions. 
 
 ![WhatsApp Image 2024-11-27 at 00 45 44_b7852972](https://github.com/user-attachments/assets/55cc1ec5-5810-4fce-947e-49fe88bfaefd)
 ![WhatsApp Image 2024-11-27 at 00 45 43_34862984](https://github.com/user-attachments/assets/8a1a2e9d-5d4a-4c32-b08c-64cd3b49482f)
